@@ -1,13 +1,12 @@
 /* ------------ ROOT ------------ */
 :root {
-  --primary-color: #ED6D25;
-  --background-color: #D9E6F7;
+  --primary-color: #ed6d25;
+  --background-color: #d9e6f7;
   --placeholder-color: #868686;
-  --input-background-color: #EFF3F8;
+  --input-background-color: #eff3f8;
 }
 
 /* ------------ /ROOT ------------ */
-
 
 /* ------------ CSS GLOBAl ------------ */
 * {
