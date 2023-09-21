@@ -1,3 +1,5 @@
+import './UolCircle.css'
+
 const UolCircle = () => {
   return (
     <svg

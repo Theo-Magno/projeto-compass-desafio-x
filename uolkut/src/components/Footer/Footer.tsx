@@ -1,6 +1,6 @@
-import './Footer.css'
+import './Footer.css';
 
-type Props = {}
+type Props = {};
 
 const Footer = (props: Props) => {
   return (
@@ -8,6 +8,6 @@ const Footer = (props: Props) => {
       <p className='footer-text'>Todos os direitos reservados</p>
     </footer>
   )
-}
+};
 
-export default Footer
+export default Footer;

@@ -13,6 +13,8 @@ footer {
     max-height: 48px;
     background-color: #FFF;
     padding: 12px;
+    bottom: 0;
+    position: fixed;
   }
 
   .footer-text {
