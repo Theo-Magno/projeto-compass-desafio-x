@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 35px 0 31px 0;
+  gap: 19px;
+}
+
+.form-actions {
+  width: 100%;
+}
+
+.title-header-card {
+  font-size: 1.25rem
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 19px;
+}
+
+.inputs input {
+  width: 50%;
+}

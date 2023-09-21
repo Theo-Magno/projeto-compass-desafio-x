@@ -1,6 +1,6 @@
-import './Header.css'
+import './Header.css';
 
-type Props = {}
+type Props = {};
 
 const Header = (props: Props) => {
   return (
@@ -8,6 +8,6 @@ const Header = (props: Props) => {
       <h1>UOLkut</h1>
     </header>
   )
-}
+};
 
-export default Header
+export default Header;

@@ -16,6 +16,8 @@
   appearance: none;
   list-style: none;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 body {
