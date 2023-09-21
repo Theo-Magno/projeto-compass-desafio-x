@@ -17,7 +17,7 @@ form {
 }
 
 .title-header-card {
-  font-size: 1.25rem
+  font-size: 1.25rem;
 }
 
 .inputs {
@@ -28,4 +28,41 @@ form {
 
 .inputs input {
   width: 50%;
+}
+
+.input__checkbox {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 19px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 12px 16px;
+}
+legend {
+  font-size: 16px;
+  color: var(--placeholder-color);
+}
+
+.checkbox-field {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.checkbox-field input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+}
+
+.checkmark {
+  width: 14px;
+  height: 15px;
+  border-radius: 4px;
+  background-color: #dfa98a;
+  margin-right: 5.18px;
+  margin-top: 1.5px;
 }
