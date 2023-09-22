@@ -14,7 +14,11 @@ const Form = (): JSX.Element => {
   };
 
   return (
-    <React.Fragment>
+    <React.Fragment> 
+      <section className='register'>
+      <div className='image'>
+        <p>Conecta-se aos seus amigos e familiares usando recados e mensagens instantâneas</p>
+      </div>
       <Card>
         <div className="header-card">
           <UolCircle />
@@ -34,12 +38,12 @@ const Form = (): JSX.Element => {
               <Input type="text" id="city" placeholder="Cidade" />
             </div>
           </div>
-
           <div className="form-actions">
             <ButtonCreate type="submit">Criar conta</ButtonCreate>
           </div>
         </form>
       </Card>
+      </section>
     </React.Fragment>
   );
 };

@@ -6,6 +6,7 @@ const Header = (props: Props) => {
   return (
     <header>
       <h1>UOLkut</h1>
+      <p>Centro de segurança</p>
     </header>
   )
 };
