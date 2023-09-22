@@ -13,7 +13,10 @@ form {
 }
 
 .form-actions {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  gap: 21.78px;
 }
 
 .title-header-card {
@@ -38,12 +41,19 @@ form {
   gap: 19px;
 }
 
-.checkbox {
+.checkbox,
+.checkbox__login {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   padding: 12px 16px;
 }
+
+.checkbox__login {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
 legend {
   font-size: 16px;
   color: var(--placeholder-color);
@@ -63,6 +73,13 @@ legend {
   height: 15px;
   border-radius: 4px;
   background-color: #dfa98a;
-  margin-right: 5.18px;
-  margin-top: 1.5px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 4rem;
+  font-size: 14px;
+  color: var(--primary-color);
+  text-decoration: underline;
 }
