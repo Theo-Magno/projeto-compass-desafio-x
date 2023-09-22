@@ -83,3 +83,10 @@ p {
   color: var(--primary-color);
   text-decoration: underline;
 }
+
+.login-redirection {
+  margin-top: 4rem;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--primary-color);
+}
