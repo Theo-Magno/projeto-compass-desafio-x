@@ -43,6 +43,15 @@ input::placeholder {
 
 a {
   text-decoration-line: underline;
+  transition: all .2s ease;
+}
+
+a:hover {
+  transition: all .2s ease;
+}
+
+svg {
+  width: 100%;
 }
 
 input {

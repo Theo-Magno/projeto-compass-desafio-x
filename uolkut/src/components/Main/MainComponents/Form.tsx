@@ -20,13 +20,13 @@ const Form = (): JSX.Element => {
           <UolCircle />
           <h2 className="title-header-card">Cadastre-se no UOLkut</h2>
         </div>
-        <form onSubmit={submitFormHandler}>
+        <form onSubmit={submitFormHandler} id="first-form">
           <div className="form-inputs">
             <Input type="email" id="email" placeholder="E-mail" />
             <Input type="password" id="password" placeholder="Senha" />
             <Input type="text" id="name" placeholder="Nome" />
             <div className="inputs">
-              <Input type="date" id="birthDate" placeholder="DD/MM/AAAA" />
+              <Input type="text" id="birthDate" placeholder="DD/MM/AAAA" />
               <Input type="text" id="profession" placeholder="Profissão" />
             </div>
             <div className="inputs">

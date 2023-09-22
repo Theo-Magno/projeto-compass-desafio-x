@@ -1,9 +1,7 @@
 import Form from './MainComponents/Form';
 import './Main.css';
 
-type Props = {};
-
-const Main = (props: Props) => {
+const Main = (): JSX.Element => {
   return (
     <main>
       <Form />
