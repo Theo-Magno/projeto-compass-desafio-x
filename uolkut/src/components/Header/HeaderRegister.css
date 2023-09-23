@@ -1,11 +1,19 @@
 #header-register {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #FFF;
+  margin: auto;
+}
+
+.content-header-register {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1216px;
   max-height: 60px;
-  background-color: #FFF;
   padding: 18px;
 }
 
@@ -19,33 +27,22 @@ header p {
 
 @media (min-width: 768px) and (max-width: 1199px) {}
 
-@media (min-width: 1200px) and (max-width: 1439px) {
+@media (min-width: 1200px) {
 
-  header {
+  .content-header-register {
     justify-content: space-between;
+    align-items: center;
   }
 
-  header h1{
+  .title-header-register {
     font-size: 36px;
-    margin-inline-start: 282px;
-  }
-  header p {
-    display: block;
-    margin-inline-end: 276px;
-  }
-}
-@media (min-width: 1440px) {
-
-  header {
-    justify-content: space-between;
   }
 
-  header h1{
-    font-size: 36px;
-    margin-inline-start: 352px;
-  }
-  header p {
+  .header-p {
+    text-decoration-line: none;
+    margin-top: 0px;
+    color: #4B4B4B;
     display: block;
-    margin-inline-end: 346px;
+    font-size: 1.125rem;
   }
 }
