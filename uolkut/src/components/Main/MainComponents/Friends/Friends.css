@@ -1,0 +1,45 @@
+.card.card-friends {
+  padding: 24px;
+  width: 100%;
+  max-width: calc(320px - 48px);
+  box-shadow: none;
+}
+
+.header-card-profile {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-card-profile p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header-card-profile a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.friends-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 33px;
+}
+
+.friends-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .card.card-friends {
+    max-width: calc(280px - 48px);
+  }
+}

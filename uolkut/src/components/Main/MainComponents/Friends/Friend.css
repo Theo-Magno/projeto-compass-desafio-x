@@ -1,0 +1,20 @@
+.people-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 0.875rem;
+  color: #4B4B4B;
+}
