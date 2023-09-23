@@ -11,6 +11,18 @@ const TextArea = styled.textarea`
     font-size: 14px;
     color: var(--placeholder-color);
   }
-`;
 
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    width: 6.9vw;
+    height: 1.5vh;
+    text-align: center;
+  }
+
+  @media (min-width: 1440px){
+    width: 5vw;
+    height: 1.5vh;
+    text-align: center;
+  }  
+`;
+ 
 export default TextArea;

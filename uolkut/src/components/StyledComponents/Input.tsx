@@ -18,6 +18,6 @@ const Input = styled.input`
   @media (min-width: 1440px){
     width: 16.5vw;
   }  
-`;
+`; 
 
 export default Input;

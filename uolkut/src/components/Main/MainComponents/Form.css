@@ -42,6 +42,10 @@ form {
   gap: 19px;
 }
 
+#kids {
+  width: 40%;
+}
+
 .checkbox {
   display: flex;
   flex-direction: column;
@@ -108,9 +112,21 @@ legend {
     width: 8.9vw;
   }
 
+  .input__checkbox {
+    gap: 16px;
+  }
+
   .form-actions {
     display: flex;
     justify-content: center;
+  }
+
+  .inputs {
+    gap: 10px;
+  }
+
+  #kids {
+    width: 9.6vw;
   }
 }
 
@@ -151,8 +167,24 @@ legend {
     width: 6.8vw;
   }
 
+  .input__checkbox {
+    gap: 16px;
+  }
+
+  .select {
+    width: 18.2vw;
+  }
+
   .form-actions {
     display: flex;
     justify-content: center;
+  }
+
+  .inputs {
+    gap: 10px;
+  }
+
+  #kids {
+    width: 7.2vw;
   }
 }
