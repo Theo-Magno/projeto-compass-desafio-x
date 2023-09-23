@@ -37,7 +37,7 @@ const Login = (): JSX.Element => {
         </div>
       </form>
 
-      <p>Esqueci minha senha</p>
+      <p id="forgot">Esqueci minha senha</p>
       {/*Usar Link*/}
     </Card>
   );
