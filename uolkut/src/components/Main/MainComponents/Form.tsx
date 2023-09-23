@@ -14,35 +14,38 @@ const Form = (): JSX.Element => {
   };
 
   return (
-    <React.Fragment> 
-      <section className='register'>
-      <div className='image'>
-        <p>Conecta-se aos seus amigos e familiares usando recados e mensagens instantâneas</p>
-      </div>
-      <Card>
-        <div className="header-card">
-          <UolCircle />
-          <h2 className="title-header-card">Cadastre-se no UOLkut</h2>
+    <React.Fragment>
+      <section className="register">
+        <div className="image">
+          <p>
+            Conecta-se aos seus amigos e familiares usando recados e mensagens
+            instantâneas
+          </p>
         </div>
-        <form onSubmit={submitFormHandler} id="first-form">
-          <div className="form-inputs">
-            <Input type="email" id="email" placeholder="E-mail" />
-            <Input type="password" id="password" placeholder="Senha" />
-            <Input type="text" id="name" placeholder="Nome" />
-            <div className="inputs">
-              <Input type="text" id="birthDate" placeholder="DD/MM/AAAA" />
-              <Input type="text" id="profession" placeholder="Profissão" />
-            </div>
-            <div className="inputs">
-              <Input type="text" id="country" placeholder="País" />
-              <Input type="text" id="city" placeholder="Cidade" />
-            </div>
+        <Card>
+          <div className="header-card">
+            <UolCircle />
+            <h2 className="title-header-card">Cadastre-se no UOLkut</h2>
           </div>
-          <div className="form-actions">
-            <ButtonCreate type="submit">Criar conta</ButtonCreate>
-          </div>
-        </form>
-      </Card>
+          <form onSubmit={submitFormHandler}>
+            <div className="form-inputs">
+              <Input type="email" id="email" placeholder="E-mail" />
+              <Input type="password" id="password" placeholder="Senha" />
+              <Input type="text" id="name" placeholder="Nome" />
+              <div className="inputs">
+                <Input type="date" id="birthDate" placeholder="DD/MM/AAAA" />
+                <Input type="text" id="profession" placeholder="Profissão" />
+              </div>
+              <div className="inputs">
+                <Input type="text" id="country" placeholder="País" />
+                <Input type="text" id="city" placeholder="Cidade" />
+              </div>
+            </div>
+            <div className="form-actions">
+              <ButtonCreate type="submit">Criar conta</ButtonCreate>
+            </div>
+          </form>
+        </Card>
       </section>
     </React.Fragment>
   );

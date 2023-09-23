@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import UolCircle from "../../Icons/UolCircle";
-import Card from "../../Card/Card";
-import Input from "../../StyledComponents/Input";
-import ButtonCreate from "../../StyledComponents/ButtonCreate";
-import TextArea from "../../StyledComponents/TextArea";
+import UolCircle from '../../Icons/UolCircle';
+import Card from '../../Card/Card';
+import Input from '../../StyledComponents/Input';
+import ButtonCreate from '../../StyledComponents/ButtonCreate';
+import TextArea from '../../StyledComponents/TextArea';
 
-import "./Form.css";
-import Select from "../../StyledComponents/Select";
+import './Form.css';
+import Select from '../../StyledComponents/Select';
 
 const SecondForm = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {
@@ -35,10 +35,14 @@ const SecondForm = (): JSX.Element => {
                 <TextArea id="interests" placeholder="Interesses" />
               </div>
               <div className="input__checkbox">
-              <Select />
-              <Input type="number" id="kids" placeholder="Filhos" />
+                <Select />
+                <Input type="number" id="kids" placeholder="Filhos" />
               </div>
-              <Input type="text" id="profile-picture" placeholder="Foto de Perfil" />
+              <Input
+                type="text"
+                id="profile-picture"
+                placeholder="Foto de Perfil"
+              />
               <Input type="text" id="musics" placeholder="Músicas Favoritas" />
               <Input type="text" id="movies" placeholder="Filmes Favoritos" />
 
