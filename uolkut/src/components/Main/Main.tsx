@@ -3,9 +3,7 @@ import "./Main.css";
 import SecondForm from "./MainComponents/SecondForm";
 // import Form from "./MainComponents/Form";
 
-type Props = {};
-
-const Main = (props: Props) => {
+const Main = (): JSX.Element => {
   return (
     <main>
       {/* <Form /> */}

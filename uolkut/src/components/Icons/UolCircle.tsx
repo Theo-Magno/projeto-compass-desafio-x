@@ -1,6 +1,6 @@
-import './UolCircle.css'
+import './UolCircle.css';
 
-const UolCircle = () => {
+const UolCircle = (): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +8,7 @@ const UolCircle = () => {
       height="32"
       viewBox="0 0 32 32"
       fill="none"
+      className="uol-circle"
     >
       <g clipPath="url(#clip0_3_873)">
         <path
