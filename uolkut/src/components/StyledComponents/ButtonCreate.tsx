@@ -11,7 +11,6 @@ const ButtonCreate = styled.button`
 
   @media (min-width: 1200px) {
     width: 17.5vw;
-    height: 4.72vh;
     font-size: 1.125rem;
   } 
 `;
