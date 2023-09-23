@@ -8,8 +8,8 @@ import NewPass from './MainComponents/NewPass';
 const Main = (): JSX.Element => {
   return (
     <main>
-      {/* <Form /> */}
-      <SecondForm />
+      <Form />
+      {/* <SecondForm /> */}
       {/*<Login />*/}
       {/*<RecoverPass />*/}
       {/* {<NewPass />} */}
