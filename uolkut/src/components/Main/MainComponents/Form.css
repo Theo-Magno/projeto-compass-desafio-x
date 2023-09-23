@@ -17,7 +17,10 @@ form {
 }
 
 .form-actions {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  gap: 21.78px;
 }
 
 .title-header-card {
@@ -46,12 +49,19 @@ form {
   width: 40%;
 }
 
-.checkbox {
+.checkbox,
+.checkbox__login {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   padding: 12px 16px;
 }
+
+.checkbox__login {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
 legend {
   font-size: 16px;
   color: var(--placeholder-color);
@@ -62,7 +72,7 @@ legend {
   flex-direction: row-reverse;
 }
 
-.checkbox-field input:checked ~ .checkmark {
+.checkbox-field input:checked~.checkmark {
   background-color: var(--primary-color);
 }
 
@@ -71,8 +81,22 @@ legend {
   height: 15px;
   border-radius: 4px;
   background-color: #dfa98a;
-  margin-right: 5.18px;
-  margin-top: 1.5px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 4rem;
+  font-size: 14px;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.login-redirection {
+  margin-top: 4rem;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--primary-color);
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
@@ -84,11 +108,9 @@ legend {
   }
 
   .image {
-    background: linear-gradient(
-        195deg,
+    background: linear-gradient(195deg,
         rgba(20, 20, 20, 0) 7.46%,
-        #141414 69.4%
-      ),
+        #141414 69.4%),
       url(/public/image.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -139,11 +161,9 @@ legend {
   }
 
   .image {
-    background: linear-gradient(
-        195deg,
+    background: linear-gradient(195deg,
         rgba(20, 20, 20, 0) 7.46%,
-        #141414 69.4%
-      ),
+        #141414 69.4%),
       url(/public/image.png);
     background-size: cover;
     background-repeat: no-repeat;
