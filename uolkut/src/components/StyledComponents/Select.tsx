@@ -30,13 +30,13 @@ const StyledSelect = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  width: 135px;
+  width: 100%;
   position: relative;
   @media (min-width: 1200px) and (max-width: 1439px) {
     width: 11.6vw;
   }
 
-  @media (min-width: 1440px){
+  @media (min-width: 1440px) {
     width: 8.5vw;
   }
 `;

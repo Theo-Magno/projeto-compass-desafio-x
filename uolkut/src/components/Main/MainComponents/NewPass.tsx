@@ -14,32 +14,42 @@ const NewPass = (): JSX.Element => {
   };
 
   return (
-    <Card>
-      <div className="header-card">
-        <UolCircle />
-        <h2 className="title-header-card">Nova senha</h2>
+    <section className="register">
+      <div className="image">
+        <p>
+          Conecta-se aos seus amigos e familiares usando recados e mensagens
+          instantâneas
+        </p>
       </div>
-      <form onSubmit={submitFormHandler}>
-        <div className="form-inputs">
-          <Input type="email" id="email" placeholder="E-mail cadastrado" />
-
-          <Input type="password" id="new-pass" placeholder="Nova senha" />
-          <Input
-            type="password"
-            id="confirm-pass"
-            placeholder="Confirmar a senha"
-          />
-
-          <div className="form-actions">
-            <ButtonCreate type="submit">Salvar</ButtonCreate>
-          </div>
+      <Card>
+        <div className="header-card">
+          <UolCircle />
+          <h2 className="title-header-card">Nova senha</h2>
         </div>
-      </form>
+        <form onSubmit={submitFormHandler}>
+          <div className="form-inputs">
+            <Input type="email" id="email" placeholder="E-mail cadastrado" />
 
-      <span className="login-redirection">Lembrou sua Senha?</span>
-      {/*Usar Link*/}
-      <ButtonCreateAlt type="submit">Entrar com as credenciais</ButtonCreateAlt>
-    </Card>
+            <Input type="password" id="new-pass" placeholder="Nova senha" />
+            <Input
+              type="password"
+              id="confirm-pass"
+              placeholder="Confirmar a senha"
+            />
+
+            <div className="form-actions">
+              <ButtonCreate type="submit">Salvar</ButtonCreate>
+            </div>
+          </div>
+        </form>
+
+        <span className="login-redirection">Lembrou sua Senha?</span>
+        {/*Usar Link*/}
+        <ButtonCreateAlt type="submit">
+          Entrar com as credenciais
+        </ButtonCreateAlt>
+      </Card>
+    </section>
   );
 };
 

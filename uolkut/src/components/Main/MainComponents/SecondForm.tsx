@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import UolCircle from '../../Icons/UolCircle';
-import Card from '../../Card/Card';
-import Input from '../../StyledComponents/Input';
-import ButtonCreate from '../../StyledComponents/ButtonCreate';
-import TextArea from '../../StyledComponents/TextArea';
+import UolCircle from "../../Icons/UolCircle";
+import Card from "../../Card/Card";
+import Input from "../../StyledComponents/Input";
+import ButtonCreate from "../../StyledComponents/ButtonCreate";
+import TextArea from "../../StyledComponents/TextArea";
 
-import './Form.css';
-import Select from '../../StyledComponents/Select';
+import "./Form.css";
+import Select from "../../StyledComponents/Select";
 
 const SecondForm = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {

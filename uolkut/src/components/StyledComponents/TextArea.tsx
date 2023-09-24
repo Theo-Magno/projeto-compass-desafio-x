@@ -18,11 +18,11 @@ const TextArea = styled.textarea`
     text-align: center;
   }
 
-  @media (min-width: 1440px){
+  @media (min-width: 1440px) {
     width: 5vw;
     height: 1.5vh;
     text-align: center;
-  }  
+  }
 `;
- 
+
 export default TextArea;

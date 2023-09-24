@@ -31,6 +31,7 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 19px;
+  width: 100%;
 }
 
 .inputs input {
@@ -43,10 +44,11 @@
   justify-content: space-around;
   align-items: center;
   gap: 19px;
+  width: 100%;
 }
 
 #kids {
-  width: 40%;
+  width: 100%;
 }
 
 .checkbox,
@@ -72,7 +74,7 @@ legend {
   flex-direction: row-reverse;
 }
 
-.checkbox-field input:checked~.checkmark {
+.checkbox-field input:checked ~ .checkmark {
   background-color: var(--primary-color);
 }
 
@@ -95,8 +97,9 @@ legend {
 .login-redirection {
   margin-top: 4rem;
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 1.125rem;
   color: var(--primary-color);
+  align-self: center;
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
@@ -107,9 +110,11 @@ legend {
   }
 
   .image {
-    background: linear-gradient(195deg,
+    background: linear-gradient(
+        195deg,
         rgba(20, 20, 20, 0) 7.46%,
-        #141414 69.4%),
+        #141414 69.4%
+      ),
       url(/public/image.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -135,6 +140,11 @@ legend {
 
   .input__checkbox {
     gap: 16px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .form-actions {
@@ -143,6 +153,9 @@ legend {
 
   .inputs {
     gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   #kids {
@@ -159,9 +172,11 @@ legend {
   }
 
   .image {
-    background: linear-gradient(195deg,
+    background: linear-gradient(
+        195deg,
         rgba(20, 20, 20, 0) 7.46%,
-        #141414 69.4%),
+        #141414 69.4%
+      ),
       url(/public/image.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -187,6 +202,10 @@ legend {
 
   .input__checkbox {
     gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .select {
