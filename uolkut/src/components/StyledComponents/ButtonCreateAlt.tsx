@@ -8,6 +8,11 @@ const ButtonCreateAlt = styled.button`
   padding: 11px 16px;
   border-radius: 8px;
   text-align: center;
+
+  @media (min-width: 1200px) {
+    width: 17.5vw;
+    font-size: 1.125rem;
+  }
 `;
 
 export default ButtonCreateAlt;
