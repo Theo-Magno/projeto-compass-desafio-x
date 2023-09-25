@@ -11,7 +11,7 @@ function App(): JSX.Element {
       <HeaderRegister />
       {/* <HeaderProfile /> */}
       <Main />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

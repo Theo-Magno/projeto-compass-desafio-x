@@ -30,7 +30,7 @@ const StyledSelect = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  width: 135px;
+  width: 97%;
   position: relative;
   @media (min-width: 1200px) and (max-width: 1439px) {
     width: 11.6vw;
