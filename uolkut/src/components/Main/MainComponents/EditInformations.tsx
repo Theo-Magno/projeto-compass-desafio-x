@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import UolCircle from '../../Icons/UolCircle';
-import Card from '../../Card/Card';
-import Input from '../../StyledComponents/Input';
-import ButtonCreate from '../../StyledComponents/ButtonCreate';
-import './EditInformation.css';
-import Select from '../../StyledComponents/Select';
-import ProfilePicture from '../../../assets/images/bg (1).png';
-import { Link } from 'react-router-dom';
+import Card from "../../Card/Card";
+import Input from "../../StyledComponents/Input";
+import ButtonCreate from "../../StyledComponents/ButtonCreate";
+import "./EditInformation.css";
+import Select from "../../StyledComponents/Select";
+import ProfilePicture from "../../../assets/images/bg (1).png";
+import { Link } from "react-router-dom";
 
 const EditInformation = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {
@@ -26,7 +25,6 @@ const EditInformation = (): JSX.Element => {
         <Card classNameCard="edit">
           <div className="edits">
             <div className="header-card">
-              <UolCircle />
               <h2 className="title-header-card-edit">Editar Informações</h2>
             </div>
             <form onSubmit={submitFormHandler}>
