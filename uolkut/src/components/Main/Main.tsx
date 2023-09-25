@@ -5,6 +5,9 @@ import SecondForm from './MainComponents/SecondForm';
 import RecoverPass from './MainComponents/RecoverPass';
 import NewPass from './MainComponents/NewPass';
 import EditInformation from './MainComponents/EditInformations';
+import Friends from './MainComponents/Friends/Friends';
+import Communities from './MainComponents/Communities/Communities';
+import InfoProfile from './InfoProfile';
 
 const Main = (): JSX.Element => {
   return (
@@ -14,7 +17,10 @@ const Main = (): JSX.Element => {
       {/*<Login />*/}
       {/*<RecoverPass />*/}
       {/* {<NewPass />} */}
-      <EditInformation />
+      {/* <EditInformation /> */}
+      {/* <Friends /> */}
+      {/* <Communities /> */}
+      <InfoProfile />
     </main>
   );
 };
