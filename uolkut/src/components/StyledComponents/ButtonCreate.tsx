@@ -9,10 +9,14 @@ const ButtonCreate = styled.button`
   border-radius: 8px;
   text-align: center;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (min-width: 1200px) {
     width: 17.5vw;
     font-size: 1.125rem;
-  } 
+  }
 `;
 
 export default ButtonCreate;

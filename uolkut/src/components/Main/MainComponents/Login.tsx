@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import UolCircle from "../../Icons/UolCircle";
-import Card from "../../Card/Card";
-import Input from "../../StyledComponents/Input";
-import ButtonCreate from "../../StyledComponents/ButtonCreate";
-import ButtonCreateAlt from "../../StyledComponents/ButtonCreateAlt";
+import UolCircle from '../../Icons/UolCircle';
+import Card from '../../Card/Card';
+import Input from '../../StyledComponents/Input';
+import ButtonCreate from '../../StyledComponents/ButtonCreate';
+import ButtonCreateAlt from '../../StyledComponents/ButtonCreateAlt';
 
-import "./Form.css";
+import './Form.css';
 const Login = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {
     console.log(event);
@@ -38,13 +39,19 @@ const Login = (): JSX.Element => {
               </label>
             </fieldset>
             <div className="form-actions">
-              <ButtonCreate type="submit">Entrar na conta</ButtonCreate>
-              <ButtonCreateAlt type="submit">Criar conta</ButtonCreateAlt>
+              <Link to="/profile">
+                <ButtonCreate type="submit">Entrar na conta</ButtonCreate>
+              </Link>
+              <Link to="/register">
+                <ButtonCreateAlt type="submit">Criar conta</ButtonCreateAlt>
+              </Link>
             </div>
           </div>
         </form>
 
-        <p id="forgot">Esqueci minha senha</p>
+        <Link to="/recover-pass">
+          <p id="forgot">Esqueci minha senha</p>
+        </Link>
         {/*Usar Link*/}
       </Card>
     </section>

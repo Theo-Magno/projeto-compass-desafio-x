@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const StyledSelect = styled.div`
   width: 100%;
@@ -30,11 +30,7 @@ const StyledSelect = styled.div`
 `;
 
 const StyledDiv = styled.div`
-<<<<<<< HEAD
-  width: 97%;
-=======
   width: 100%;
->>>>>>> feat/login
   position: relative;
   @media (min-width: 1200px) and (max-width: 1439px) {
     width: 11.6vw;
@@ -85,14 +81,14 @@ const StyledSpan = styled.span`
 
 export default function Select() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Relacionamento");
+  const [selectedOption, setSelectedOption] = useState('Relacionamento');
 
   const options = [
-    "Solteiro",
-    "Casado",
-    "Divorciado",
-    "Namorando",
-    "Preocupado",
+    'Solteiro',
+    'Casado',
+    'Divorciado',
+    'Namorando',
+    'Preocupado'
   ];
 
   const handleOptions = () => {
@@ -135,7 +131,7 @@ export default function Select() {
               onClick={() => handleOptionClick(option)}
               style={{
                 borderBottom:
-                  index === options.length - 1 ? "none" : "1px solid #ed6d25",
+                  index === options.length - 1 ? 'none' : '1px solid #ed6d25'
               }}
             >
               {option}

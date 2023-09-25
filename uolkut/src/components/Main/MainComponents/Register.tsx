@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import UolCircle from '../../Icons/UolCircle';
 import Card from '../../Card/Card';
@@ -7,7 +8,7 @@ import ButtonCreate from '../../StyledComponents/ButtonCreate';
 
 import './Form.css';
 
-const Form = (): JSX.Element => {
+const Register = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {
     console.log(event);
     event.preventDefault();
@@ -42,7 +43,9 @@ const Form = (): JSX.Element => {
               </div>
             </div>
             <div className="form-actions">
-              <ButtonCreate type="submit">Criar conta</ButtonCreate>
+              <Link to="/second-register">
+                <ButtonCreate type="submit">Criar conta</ButtonCreate>
+              </Link>
             </div>
           </form>
         </Card>
@@ -51,4 +54,4 @@ const Form = (): JSX.Element => {
   );
 };
 
-export default Form;
+export default Register;

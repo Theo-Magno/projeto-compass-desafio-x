@@ -1,4 +1,4 @@
-import Form from './MainComponents/Form';
+import Form from './MainComponents/Register';
 import './Main.css';
 import Login from './MainComponents/Login';
 import SecondForm from './MainComponents/SecondForm';

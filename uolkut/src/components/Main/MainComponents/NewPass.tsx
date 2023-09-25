@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import UolCircle from "../../Icons/UolCircle";
-import Card from "../../Card/Card";
-import Input from "../../StyledComponents/Input";
-import ButtonCreate from "../../StyledComponents/ButtonCreate";
-import ButtonCreateAlt from "../../StyledComponents/ButtonCreateAlt";
+import UolCircle from '../../Icons/UolCircle';
+import Card from '../../Card/Card';
+import Input from '../../StyledComponents/Input';
+import ButtonCreate from '../../StyledComponents/ButtonCreate';
+import ButtonCreateAlt from '../../StyledComponents/ButtonCreateAlt';
 
-import "./Form.css";
+import './Form.css';
+import { Link } from 'react-router-dom';
 const NewPass = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {
     console.log(event);
@@ -37,17 +38,21 @@ const NewPass = (): JSX.Element => {
               placeholder="Confirmar a senha"
             />
 
-            <div className="form-actions">
-              <ButtonCreate type="submit">Salvar</ButtonCreate>
+            <div className="form-actions edit">
+              <Link to="/">
+                <ButtonCreate type="submit">Salvar</ButtonCreate>
+              </Link>
             </div>
           </div>
         </form>
-
-        <span className="login-redirection">Lembrou sua Senha?</span>
-        {/*Usar Link*/}
-        <ButtonCreateAlt type="submit">
-          Entrar com as credenciais
-        </ButtonCreateAlt>
+        <Link to="/">
+          <span className="login-redirection">Lembrou sua Senha?</span>
+        </Link>
+        <Link to="/">
+          <ButtonCreateAlt type="submit">
+            Entrar com as credenciais
+          </ButtonCreateAlt>
+        </Link>
       </Card>
     </section>
   );
