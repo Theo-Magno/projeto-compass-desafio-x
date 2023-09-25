@@ -9,7 +9,7 @@ import photoJulia from '../../../../assets/images/friend-julia.png';
 import photoCarol from '../../../../assets/images/friend-carol.png';
 
 import Friend from './Friend';
-import CardsFC from '../../../Card/CardsFC';
+import CardsFC from '../Card/CardsFC';
 
 const Friends = (): JSX.Element => {
   return (

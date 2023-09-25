@@ -1,6 +1,6 @@
 import Footer from '../components/Footer/Footer';
 import HeaderRegister from '../components/Header/HeaderRegister';
-import RecoverPass from '../components/Main/MainComponents/RecoverPass';
+import RecoverPass from '../components/RecoverPass';
 
 type Props = {};
 const RecoverPassPage = (props: Props) => {

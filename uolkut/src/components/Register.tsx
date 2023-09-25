@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import UolCircle from '../../Icons/UolCircle';
-import Card from '../../Card/Card';
-import Input from '../../StyledComponents/Input';
-import ButtonCreate from '../../StyledComponents/ButtonCreate';
+import UolCircle from './Icons/UolCircle';
+import Card from './Card/Card';
+import Input from './StyledComponents/Input';
+import ButtonCreate from './StyledComponents/ButtonCreate';
 
 import './Form.css';
 

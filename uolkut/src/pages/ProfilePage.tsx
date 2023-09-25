@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Card from '../components/Card/Card';
 import Footer from '../components/Footer/Footer';
 import HeaderProfile from '../components/Header/HeaderProfile';
-import InfoProfile from '../components/Main/InfoProfile';
+import InfoProfile from '../components/InfoProfile';
 
 type Props = {};
 const ProfilePage = (props: Props): JSX.Element => {

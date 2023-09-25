@@ -1,12 +1,12 @@
 import React from 'react';
 
-import UolCircle from '../../Icons/UolCircle';
-import Card from '../../Card/Card';
-import Input from '../../StyledComponents/Input';
-import ButtonCreate from '../../StyledComponents/ButtonCreate';
+import UolCircle from './Icons/UolCircle';
+import Card from './Card/Card';
+import Input from './StyledComponents/Input';
+import ButtonCreate from './StyledComponents/ButtonCreate';
 import './EditInformation.css';
-import Select from '../../StyledComponents/Select';
-import ProfilePicture from '../../../assets/images/bg (1).png';
+import Select from './StyledComponents/Select';
+import ProfilePicture from '../assets/images/bg (1).png';
 import { Link } from 'react-router-dom';
 
 const EditInformation = (): JSX.Element => {

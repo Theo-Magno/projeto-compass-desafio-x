@@ -9,7 +9,7 @@ import MyBooks from '../../../../assets/images/cummunity-my-books.png';
 import Cafe from '../../../../assets/images/cummunity-cafe.png';
 
 import Community from './Community';
-import CardsFC from '../../../Card/CardsFC';
+import CardsFC from '../Card/CardsFC';
 
 const Communities = (): JSX.Element => {
   return (

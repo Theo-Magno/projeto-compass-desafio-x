@@ -1,6 +1,6 @@
 import Footer from '../components/Footer/Footer';
 import HeaderRegister from '../components/Header/HeaderRegister';
-import NewPass from '../components/Main/MainComponents/NewPass';
+import NewPass from '../components/NewPass';
 
 type Props = {};
 const NewPassPage = (props: Props) => {

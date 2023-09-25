@@ -1,13 +1,13 @@
 import React from 'react';
 
-import UolCircle from '../../Icons/UolCircle';
-import Card from '../../Card/Card';
-import Input from '../../StyledComponents/Input';
-import ButtonCreate from '../../StyledComponents/ButtonCreate';
-import TextArea from '../../StyledComponents/TextArea';
+import UolCircle from './Icons/UolCircle';
+import Card from './Card/Card';
+import Input from './StyledComponents/Input';
+import ButtonCreate from './StyledComponents/ButtonCreate';
+import TextArea from './StyledComponents/TextArea';
 
 import './Form.css';
-import Select from '../../StyledComponents/Select';
+import Select from './StyledComponents/Select';
 import { Link } from 'react-router-dom';
 
 const SecondForm = (): JSX.Element => {

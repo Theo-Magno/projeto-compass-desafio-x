@@ -1,4 +1,4 @@
-import Login from '../components/Main/MainComponents/Login';
+import Login from '../components/Login';
 import HeaderRegister from '../components/Header/HeaderRegister';
 import Footer from '../components/Footer/Footer';
 

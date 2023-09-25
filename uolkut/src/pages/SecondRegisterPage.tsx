@@ -1,6 +1,6 @@
 import Footer from '../components/Footer/Footer';
 import HeaderRegister from '../components/Header/HeaderRegister';
-import SecondForm from '../components/Main/MainComponents/SecondForm';
+import SecondForm from '../components/SecondForm';
 
 type Props = {};
 const SecondRegisterPage = (props: Props) => {
