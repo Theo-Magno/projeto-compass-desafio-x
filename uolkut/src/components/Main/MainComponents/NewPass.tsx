@@ -15,7 +15,7 @@ const NewPass = (): JSX.Element => {
   };
 
   return (
-    <section className="register">
+    <section className="register new">
       <div className="image">
         <p>
           Conecta-se aos seus amigos e familiares usando recados e mensagens

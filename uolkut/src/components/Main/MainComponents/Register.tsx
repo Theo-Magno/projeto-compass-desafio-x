@@ -16,7 +16,7 @@ const Register = (): JSX.Element => {
 
   return (
     <React.Fragment>
-      <section className="register">
+      <section className="register create">
         <div className="image">
           <p>
             Conecta-se aos seus amigos e familiares usando recados e mensagens

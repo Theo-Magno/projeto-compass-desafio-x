@@ -17,7 +17,7 @@ const SecondForm = (): JSX.Element => {
 
   return (
     <React.Fragment>
-      <section className="register">
+      <section className="register create-two">
         <div className="image">
           <p>
             Conecta-se aos seus amigos e familiares usando recados e mensagens

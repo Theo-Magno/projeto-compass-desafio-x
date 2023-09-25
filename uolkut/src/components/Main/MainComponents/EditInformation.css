@@ -51,7 +51,7 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
-  .uol-circle {
+  .header-card svg {
     display: none;
   }
 
@@ -76,13 +76,14 @@
     width: 12.85vw;
     height: 15.74vh;
     border-radius: 50%;
-    border: 3px solid #ED6D25;
-    margin-top: 25%;
+    border: 3px solid #ed6d25;
+    margin-inline-start: 20%;
   }
 
   .card.edit {
     width: 40.83vw;
-    height: 74.07vh;
+    height: 70vh;
+    margin-bottom: 2.5rem;
   }
 
   .image-profile .card {
@@ -90,10 +91,12 @@
     height: 30.09vh;
   }
 
-
-
   .inputs-edit input {
     width: 15.9vw;
+  }
+
+  .form-inputs-edit {
+    margin-bottom: 40%;
   }
 
   .form-actions-edit {
@@ -114,20 +117,16 @@
     gap: 10px;
   }
 
-  .msonw {
-    width: 18.7vw !important;
+  .MhvyR {
+    width: 18vw !important;
   }
 
-  .bzLfkD {
-    max-width: 17rem;
-    padding-bottom: 6%;
-    align-items: end !important;
+  .eQhfrn {
+    height: 4.6vh !important;
+    max-width: 220px !important;
   }
 
-  .kKgkek {
-    margin-top: 20%;
-  }
-
+  
   .editions {
     width: 100%;
     margin-top: 4.58%;
@@ -141,7 +140,7 @@
 }
 
 @media (min-width: 1440px) {
-  .uol-circle {
+  .header-card svg {
     display: none;
   }
 
@@ -166,18 +165,23 @@
     width: 8.85vw;
     height: 15.74vh;
     border-radius: 92px;
-    border: 3px solid #ED6D25;
-    margin-top: 25%;
+    border: 3px solid #ed6d25;
+    margin-inline-start: 20%;
   }
 
   .card.edit {
     width: 30.83vw;
-    height: 79.07vh;
+    height: 70vh;
+    margin-bottom: 3%;
   }
 
   .image-profile .card {
     width: 14.58vw;
     height: 30.09vh;
+  }
+
+  .form-inputs-edit {
+    margin-bottom: 40%;
   }
 
   .form-actions-edit {
@@ -201,21 +205,16 @@
 
   .inputs_ input {
     width: 12.5vw;
-    height: 2.72vh
+    height: 2.72vh;
   }
 
-  .msonw {
-    width: 14.17vw !important;
+  .MhvyR {
+    width: 14vw !important;
   }
 
-  .bzLfkD {
-    max-width: 17rem;
-    padding-bottom: 6%;
-    align-items: end !important;
-  }
-
-  .kKgkek {
-    margin-top: 50%;
+  .eQhfrn {
+    height: 5vh !important;
+    max-width: 265px !important;
   }
 
   .editions {

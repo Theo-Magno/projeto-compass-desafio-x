@@ -20,7 +20,7 @@ const Main = (): JSX.Element => {
       {/* <EditInformation /> */}
       {/* <Friends /> */}
       {/* <Communities /> */}
-      <InfoProfile />
+      {/* <InfoProfile /> */}
     </main>
   );
 };
