@@ -30,11 +30,7 @@ const StyledSelect = styled.div`
 `;
 
 const StyledDiv = styled.div`
-<<<<<<< HEAD
   width: 97%;
-=======
-  width: 100%;
->>>>>>> feat/login
   position: relative;
   @media (min-width: 1200px) and (max-width: 1439px) {
     width: 11.6vw;

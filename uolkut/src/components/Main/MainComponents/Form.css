@@ -92,6 +92,7 @@ legend {
   font-size: 14px;
   color: var(--primary-color);
   text-decoration: underline;
+  align-self: center;
 }
 
 .login-redirection {
@@ -214,6 +215,7 @@ legend {
 
   .inputs {
     gap: 10px;
+    justify-content: center;
   }
 
   #kids {
