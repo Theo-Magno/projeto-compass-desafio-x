@@ -1,5 +1,3 @@
-import './Friend.css';
-
 type Props = {
   srcImgFriend: string;
   nameFriend: string;
@@ -7,7 +5,7 @@ type Props = {
 
 const Friend = ({ srcImgFriend, nameFriend }: Props): JSX.Element => {
   return (
-    <div className="people-box">
+    <div className="box-item">
       <img src={srcImgFriend} alt="friend" className="photo" />
       <p className="name">{nameFriend}</p>
     </div>

@@ -8,10 +8,10 @@ import './App.css';
 function App(): JSX.Element {
   return (
     <div className="App">
-      <HeaderRegister />
-      {/* <HeaderProfile /> */}
+      {/* <HeaderRegister /> */}
+      <HeaderProfile />
       <Main />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
