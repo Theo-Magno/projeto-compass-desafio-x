@@ -42,21 +42,22 @@ input::placeholder {
 }
 
 a {
-  text-decoration-line: underline;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
 }
 
 a:hover {
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 dt {
-  color: #B4AEAE;
+  color: #b4aeae;
 }
 
 p,
 dd {
-  color: #4B4B4B;
+  color: #4b4b4b;
 }
 
 svg {
@@ -69,7 +70,7 @@ input {
 
 label,
 input::placeholder {
-  color: var(--placeholder-color)
+  color: var(--placeholder-color);
 }
 
 /* ------------ /CSS GLOBAl ------------ */

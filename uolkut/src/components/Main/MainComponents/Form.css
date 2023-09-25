@@ -32,6 +32,7 @@
   flex-wrap: nowrap;
   gap: 19px;
   width: 100%;
+  justify-content: center;
 }
 
 .inputs input {
@@ -92,6 +93,7 @@ legend {
   font-size: 14px;
   color: var(--primary-color);
   text-decoration: underline;
+  align-self: center;
 }
 
 .login-redirection {

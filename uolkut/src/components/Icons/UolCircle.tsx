@@ -1,4 +1,4 @@
-import './UolCircle.css';
+import "./UolCircle.css";
 
 const UolCircle = (): JSX.Element => {
   return (
@@ -8,7 +8,7 @@ const UolCircle = (): JSX.Element => {
       height="32"
       viewBox="0 0 32 32"
       fill="none"
-      className="uol-circle"
+      //className="uol-circle"
     >
       <g clipPath="url(#clip0_3_873)">
         <path
