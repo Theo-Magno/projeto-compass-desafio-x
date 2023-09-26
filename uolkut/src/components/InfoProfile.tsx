@@ -9,6 +9,7 @@ import ThumbsUp from './Icons/emojis/ThumbsUp';
 import Sexy from './Icons/emojis/Sexy';
 
 import Triangle from '../assets/images/triangle.png';
+import { Link } from 'react-router-dom';
 
 const InfoProfile = (): JSX.Element => {
   return (
@@ -91,10 +92,9 @@ const InfoProfile = (): JSX.Element => {
             <dd className="more">Rap</dd>
             <dd className="more">indie</dd>
           </dl>
-          {/* <Link to="#">Ver todos</Link> */}
-          <a href="#" className="see-more">
+          <Link to="#" className="see-more">
             Ver todos
-          </a>
+          </Link>
         </div>
         <div className="films">
           <dl className="tags">
@@ -102,10 +102,9 @@ const InfoProfile = (): JSX.Element => {
             <dd>A rede social</dd>
             <dd className="more">Meu amigo tororo</dd>
           </dl>
-          {/* </Link> */}
-          <a href="#" className="see-more">
+          <Link to="#" className="see-more">
             Ver todos
-          </a>
+          </Link>
         </div>
       </div>
     </Card>

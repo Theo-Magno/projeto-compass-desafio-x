@@ -11,11 +11,10 @@ type Props = {
 
 const CardsFC = ({ children, typeCard, link }: Props): JSX.Element => {
   return (
-    <Card classNameCard="card-friends">
+    <Card classNameCard="card-fc">
       <div className="header-card-profile">
         <p>{typeCard}</p>
-        {/* <Link to="#"></Link> */}
-        <a href="#">Ver todos</a>
+        <Link to="#">Ver todos</Link>
       </div>
       {children}
     </Card>

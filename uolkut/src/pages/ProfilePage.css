@@ -36,6 +36,7 @@
   margin: 0;
   margin-top: 32px;
   padding: 24px;
+  max-width: 100%;
 }
 
 .profile-photo img {
@@ -62,6 +63,7 @@
   padding: 14px;
   margin-top: 16px;
   width: 100%;
+  max-width: 100%;
 }
 
 .edit-profile p {
