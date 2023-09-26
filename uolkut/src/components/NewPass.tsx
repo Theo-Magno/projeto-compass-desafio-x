@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import UolCircle from './Icons/UolCircle';
-import Card from './Card/Card';
-import Input from './StyledComponents/Input';
-import ButtonCreate from './StyledComponents/ButtonCreate';
-import ButtonCreateAlt from './StyledComponents/ButtonCreateAlt';
+import UolCircle from "./Icons/UolCircle";
+import Card from "./Card/Card";
+import Input from "./StyledComponents/Input";
+import ButtonCreate from "./StyledComponents/ButtonCreate";
+import ButtonCreateAlt from "./StyledComponents/ButtonCreateAlt";
 
-import './Form.css';
-import { Link } from 'react-router-dom';
+import "./Form.css";
+import { Link } from "react-router-dom";
 const NewPass = (): JSX.Element => {
   const submitFormHandler = (event: React.FormEvent) => {
     console.log(event);
@@ -29,7 +29,7 @@ const NewPass = (): JSX.Element => {
         </div>
         <form onSubmit={submitFormHandler}>
           <div className="form-inputs">
-            <Input type="email" id="email" placeholder="Informe o código" />
+            <Input type="text" id="email" placeholder="Informe o código" />
 
             <Input type="password" id="new-pass" placeholder="Nova senha" />
             <Input

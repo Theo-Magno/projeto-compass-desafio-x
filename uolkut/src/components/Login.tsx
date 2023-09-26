@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import UolCircle from './Icons/UolCircle';
-import Card from './Card/Card';
-import Input from './StyledComponents/Input';
-import ButtonCreate from './StyledComponents/ButtonCreate';
-import ButtonCreateAlt from './StyledComponents/ButtonCreateAlt';
+import UolCircle from "./Icons/UolCircle";
+import Card from "./Card/Card";
+import Input from "./StyledComponents/Input";
+import ButtonCreate from "./StyledComponents/ButtonCreate";
+import ButtonCreateAlt from "./StyledComponents/ButtonCreateAlt";
 
-import './Form.css';
+import "./Form.css";
 
 const Login = (): JSX.Element => {
-  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(true);
 
-  const [enteredPassword, setEnteredPassword] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState("");
   const [enteredPasswordIsValid, setEnteredPasswordIsValid] = useState(true);
 
   const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,18 +27,17 @@ const Login = (): JSX.Element => {
   };
 
   const submitFormHandler = (event: React.FormEvent) => {
-    if (!enteredEmail.includes('@') || enteredEmail.trim() === '') {
+    if (!enteredEmail.includes("@") || enteredEmail.trim() === "") {
       setEnteredEmailIsValid(false);
       event.preventDefault();
-      return;
     }
-    setEnteredEmailIsValid(true);
 
-    if (enteredPassword.trim() === '') {
+    if (enteredPassword.trim() === "") {
       setEnteredPasswordIsValid(false);
       event.preventDefault();
       return;
     }
+    setEnteredEmailIsValid(true);
     setEnteredPasswordIsValid(true);
   };
 
