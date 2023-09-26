@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './HeaderProfile.css';
 import Expansive from '../Icons/Expansive';
@@ -11,16 +11,10 @@ const HeaderProfile = (): JSX.Element => {
         <div className="header-left">
           <h1 className="title-header-profile">UOLkut</h1>
           <nav className="navbar">
-            {/* <Link to="#">Início</Link>
-        <Link to="#">Perfil</Link>
-        <Link to="#">Comunidades</Link>
-        <Link to="#">Jogos</Link> */}
-            <a href="#">Início</a>
-            <a href="#" className="active">
-              Perfil
-            </a>
-            <a href="#">Comunidades</a>
-            <a href="#">Jogos</a>
+            <NavLink to="/">Início</NavLink>
+            <NavLink to="/profile">Perfil</NavLink>
+            <NavLink to="/community">Comunidades</NavLink>
+            <NavLink to="/games">Jogos</NavLink>
           </nav>
         </div>
         <div className="header-right">

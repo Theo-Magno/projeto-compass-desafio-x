@@ -18,9 +18,12 @@ function App(): JSX.Element {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/second-register" element={<SecondRegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route
+            path="/profile/edit-information"
+            element={<EditInformationPage />}
+          />
           <Route path="/recover-pass" element={<RecoverPassPage />} />
           <Route path="/new-pass" element={<NewPassPage />} />
-          <Route path="/edit-information" element={<EditInformationPage />} />
         </Routes>
       </BrowserRouter>
     </div>

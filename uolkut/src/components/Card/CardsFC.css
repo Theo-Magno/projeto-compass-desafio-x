@@ -1,5 +1,6 @@
 .card.card-friends {
   padding: 24px;
+  margin: 0;
   width: 100%;
   max-width: calc(320px - 48px);
   box-shadow: none;
