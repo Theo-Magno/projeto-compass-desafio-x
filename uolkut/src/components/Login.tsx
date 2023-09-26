@@ -60,6 +60,7 @@ const Login = (): JSX.Element => {
               type="email"
               id="email"
               placeholder="E-mail"
+              value={enteredEmail}
               onChange={emailChangeHandler}
             />
             {!enteredEmailIsValid && (
@@ -69,6 +70,7 @@ const Login = (): JSX.Element => {
               type="password"
               id="password"
               placeholder="Senha"
+              value={enteredPassword}
               onChange={passwordChangeHandler}
             />
             {!enteredPasswordIsValid && (
