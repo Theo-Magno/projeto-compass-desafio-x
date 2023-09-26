@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import UolCircle from './Icons/UolCircle';
@@ -8,10 +8,38 @@ import ButtonCreate from './StyledComponents/ButtonCreate';
 import ButtonCreateAlt from './StyledComponents/ButtonCreateAlt';
 
 import './Form.css';
+
 const Login = (): JSX.Element => {
+  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(true);
+
+  const [enteredPassword, setEnteredPassword] = useState('');
+  const [enteredPasswordIsValid, setEnteredPasswordIsValid] = useState(true);
+
+  const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEnteredEmail(event.target.value);
+  };
+
+  const passwordChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setEnteredPassword(event.target.value);
+  };
+
   const submitFormHandler = (event: React.FormEvent) => {
-    console.log(event);
-    event.preventDefault();
+    if (!enteredEmail.includes('@') || enteredEmail.trim() === '') {
+      setEnteredEmailIsValid(false);
+      event.preventDefault();
+      return;
+    }
+    setEnteredEmailIsValid(true);
+
+    if (enteredPassword.trim() === '') {
+      setEnteredPasswordIsValid(false);
+      event.preventDefault();
+      return;
+    }
+    setEnteredPasswordIsValid(true);
   };
 
   return (
@@ -29,8 +57,24 @@ const Login = (): JSX.Element => {
         </div>
         <form onSubmit={submitFormHandler}>
           <div className="form-inputs">
-            <Input type="email" id="email" placeholder="E-mail" />
-            <Input type="password" id="password" placeholder="Senha" />
+            <Input
+              type="email"
+              id="email"
+              placeholder="E-mail"
+              onChange={emailChangeHandler}
+            />
+            {!enteredEmailIsValid && (
+              <p className="invalid-input">Email Inválido</p>
+            )}
+            <Input
+              type="password"
+              id="password"
+              placeholder="Senha"
+              onChange={passwordChangeHandler}
+            />
+            {!enteredPasswordIsValid && (
+              <p className="invalid-input">Senha inválida</p>
+            )}
             <fieldset className="checkbox__login">
               <label className="checkbox-field">
                 Lembrar minha senha
@@ -40,7 +84,9 @@ const Login = (): JSX.Element => {
             </fieldset>
             <div className="form-actions">
               <Link to="/profile">
-                <ButtonCreate type="submit">Entrar na conta</ButtonCreate>
+                <ButtonCreate type="submit" onClick={submitFormHandler}>
+                  Entrar na conta
+                </ButtonCreate>
               </Link>
               <Link to="/register">
                 <ButtonCreateAlt type="submit">Criar conta</ButtonCreateAlt>
