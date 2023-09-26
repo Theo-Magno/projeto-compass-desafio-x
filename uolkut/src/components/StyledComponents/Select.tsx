@@ -30,7 +30,11 @@ const StyledSelect = styled.div`
 `;
 
 const StyledDiv = styled.div`
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 97%;
+>>>>>>> ae641e66fb584ab11f1257be8d8bb0baaf641f34
   position: relative;
   @media (min-width: 1200px) and (max-width: 1439px) {
     width: 11.6vw;

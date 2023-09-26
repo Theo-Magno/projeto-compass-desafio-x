@@ -16,6 +16,7 @@ const ButtonCreateAlt = styled.button`
   @media (min-width: 1200px) {
     width: 17.5vw;
     font-size: 1.125rem;
+    align-self: center;
   }
 `;
 

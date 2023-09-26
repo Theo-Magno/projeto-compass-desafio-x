@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Card from '../components/Card/Card';
-import Footer from '../components/Footer/Footer';
 import HeaderProfile from '../components/Header/HeaderProfile';
 import InfoProfile from '../components/InfoProfile';
 
