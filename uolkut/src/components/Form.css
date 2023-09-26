@@ -112,6 +112,13 @@ legend {
   align-self: center;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  #kids {
+    width: 90%;
+    margin-inline-start: 0.5rem;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1439px) {
   .register {
     display: flex;
@@ -120,17 +127,17 @@ legend {
     margin-bottom: 8rem;
   }
 
-  .create{
+  .create {
     margin-bottom: 12.5rem;
   }
-  
-  .create-two{
+
+  .create-two {
     margin-bottom: 5.2rem;
   }
 
   .recover {
     margin-bottom: 16rem;
-  } 
+  }
 
   .new {
     margin-bottom: 8.5rem;
@@ -198,7 +205,7 @@ legend {
     margin-inline-start: 22rem;
   }
 
-  .create-two{
+  .create-two {
     margin-bottom: 12rem;
   }
 

@@ -7,6 +7,7 @@ import ButtonCreate from './StyledComponents/ButtonCreate';
 import './EditInformation.css';
 import Select from './StyledComponents/Select';
 import ProfilePicture from '../assets/images/profile-img.png';
+import Pen from '../assets/images/pen.png';
 import { Link } from 'react-router-dom';
 
 const EditInformation = (): JSX.Element => {
@@ -20,7 +21,8 @@ const EditInformation = (): JSX.Element => {
       <section className="editions">
         <div className="image-profile">
           <Card classNameCard="edit">
-            <img src={ProfilePicture} alt="Profile" />
+            <img src={ProfilePicture} alt="Profile" className='profile-picture' />
+            <img src={Pen} alt="Pen" className='pen' />
           </Card>
         </div>
         <Card classNameCard="edit">

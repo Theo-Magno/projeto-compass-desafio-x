@@ -1,3 +1,7 @@
+.header-card-edit{
+  text-align: center;
+}
+
 .form-inputs-edit {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +27,7 @@
   justify-content: center;
   align-items: center;
   gap: 19px;
+  width: 100%;
 }
 
 .inputs-edit {
@@ -39,15 +44,18 @@
   display: none;
 }
 
-.bzLfkD {
-  width: auto !important;
-  max-width: 277px !important;
-  padding-bottom: 2%;
-  align-items: center !important;
-}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header-card-edit {
+    text-align: center;
+  }
 
-.msonw {
-  width: 100% !important;
+  .inputs_ {
+    width: 100%;
+  }
+
+  .inputs-edit {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
@@ -72,7 +80,19 @@
     margin: auto;
   }
 
-  .card.edit img {
+  .pen {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 92px;
+    border: 3px solid #ed6d25;
+    position: relative;
+    margin-top: -3rem;
+    margin-inline-start: 3.5rem;
+    background-color: #fff;
+  }
+
+  .profile-picture {
     width: 12.85vw;
     height: 15.74vh;
     border-radius: 50%;
@@ -121,12 +141,6 @@
     width: 18vw !important;
   }
 
-  .eQhfrn {
-    height: 4.6vh !important;
-    max-width: 220px !important;
-  }
-
-
   .editions {
     width: 100%;
     margin-top: 4.58%;
@@ -161,7 +175,18 @@
     margin: auto;
   }
 
-  .card.edit img {
+  .pen {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 92px;
+    border: 3px solid #ed6d25;
+    position: relative;
+    margin-top: -3rem;
+    margin-inline-start: 3.5rem;
+    background-color: #fff;
+  }
+  .profile-picture {
     width: 8.85vw;
     height: 15.74vh;
     border-radius: 92px;
@@ -206,15 +231,6 @@
   .inputs_ input {
     width: 12.5vw;
     height: 2.72vh;
-  }
-
-  .MhvyR {
-    width: 14vw !important;
-  }
-
-  .eQhfrn {
-    height: 5vh !important;
-    max-width: 265px !important;
   }
 
   .editions {

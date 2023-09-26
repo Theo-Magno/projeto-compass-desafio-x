@@ -20,12 +20,21 @@ const StyledSelect = styled.div`
   cursor: pointer;
   position: relative;
   z-index: 1;
+  max-width: 75.28vw;
   &:hover {
     background-color: #dce1e8;
   }
 
   @media (min-width: 768px) {
     font-size: 16px;
+    max-width: 69.01vw;
+  }
+  @media (min-width: 1200px) {
+    max-width: 215px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 265px;
+    height: 4.74vh;
   }
 `;
 
@@ -36,8 +45,11 @@ const StyledDiv = styled.div`
     width: 11.6vw;
   }
 
+  @media (min-width: 1200px) {
+    width: 18.6vw;
+  }
   @media (min-width: 1440px) {
-    width: 8.5vw;
+    width: 14.2vw;
   }
 `;
 

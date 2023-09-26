@@ -6,8 +6,8 @@ import Input from './StyledComponents/Input';
 import ButtonCreate from './StyledComponents/ButtonCreate';
 import TextArea from './StyledComponents/TextArea';
 import SelectEdit from './StyledComponents/SelectEdit';
-
 import './Form.css';
+
 import { Link } from 'react-router-dom';
 
 const SecondForm = (): JSX.Element => {

@@ -3,7 +3,10 @@ footer {
 }
 
 @media (min-width: 768px) {
-  footer {
+  .footer {
+    display: none;
+  }
+  /* footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,7 +20,7 @@ footer {
     font-size: 18px;
     line-height: 24px;
     color: var(--primary-color);
-  }
+  } */
 }
 
 @media (min-width: 1200px) {
