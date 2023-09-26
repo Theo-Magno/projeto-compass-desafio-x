@@ -51,7 +51,7 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
-  .header-card svg {
+  .header-card-edit svg {
     display: none;
   }
 
@@ -126,7 +126,7 @@
     max-width: 220px !important;
   }
 
-  
+
   .editions {
     width: 100%;
     margin-top: 4.58%;
@@ -140,7 +140,7 @@
 }
 
 @media (min-width: 1440px) {
-  .header-card svg {
+  .header-card-edit svg {
     display: none;
   }
 

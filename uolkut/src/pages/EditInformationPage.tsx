@@ -1,4 +1,3 @@
-import Footer from '../components/Footer/Footer';
 import HeaderProfile from '../components/Header/HeaderProfile';
 import EditInformation from '../components/EditInformations';
 
@@ -8,7 +7,6 @@ const EditInformationPage = (props: Props) => {
     <div>
       <HeaderProfile />
       <EditInformation />
-      <Footer />
     </div>
   );
 };

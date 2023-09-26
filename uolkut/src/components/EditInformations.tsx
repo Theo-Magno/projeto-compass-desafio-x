@@ -6,7 +6,7 @@ import Input from './StyledComponents/Input';
 import ButtonCreate from './StyledComponents/ButtonCreate';
 import './EditInformation.css';
 import Select from './StyledComponents/Select';
-import ProfilePicture from '../assets/images/bg (1).png';
+import ProfilePicture from '../assets/images/profile-img.png';
 import { Link } from 'react-router-dom';
 
 const EditInformation = (): JSX.Element => {
@@ -25,7 +25,7 @@ const EditInformation = (): JSX.Element => {
         </div>
         <Card classNameCard="edit">
           <div className="edits">
-            <div className="header-card">
+            <div className="header-card-edit">
               <UolCircle />
               <h2 className="title-header-card-edit">Editar Informações</h2>
             </div>
