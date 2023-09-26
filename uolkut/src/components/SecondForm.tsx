@@ -5,9 +5,9 @@ import Card from './Card/Card';
 import Input from './StyledComponents/Input';
 import ButtonCreate from './StyledComponents/ButtonCreate';
 import TextArea from './StyledComponents/TextArea';
+import SelectEdit from './StyledComponents/SelectEdit';
 
 import './Form.css';
-import Select from './StyledComponents/Select';
 import { Link } from 'react-router-dom';
 
 const SecondForm = (): JSX.Element => {
@@ -36,7 +36,7 @@ const SecondForm = (): JSX.Element => {
                 <TextArea id="interests" placeholder="Interesses" />
               </div>
               <div className="input__checkbox">
-                <Select />
+                <SelectEdit />
                 <Input type="number" id="kids" placeholder="Filhos" />
               </div>
               <Input

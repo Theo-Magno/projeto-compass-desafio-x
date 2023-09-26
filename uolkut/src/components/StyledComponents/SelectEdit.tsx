@@ -38,6 +38,7 @@ const StyledDiv = styled.div`
 
   @media (min-width: 1440px) {
     width: 8.5vw;
+    max-width: 155px;
   }
 `;
 
@@ -79,7 +80,7 @@ const StyledSpan = styled.span`
   right: 7px;
 `;
 
-export default function Select() {
+export default function SelectEdit() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('Relacionamento');
 
