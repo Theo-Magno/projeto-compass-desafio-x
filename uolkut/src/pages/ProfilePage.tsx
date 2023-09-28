@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import Card from '../components/Card/Card';
 import HeaderProfile from '../components/Header/HeaderProfile';
-import InfoProfile from '../components/InfoProfile';
+import InfoProfile from '../components/InfoProfile/InfoProfile';
 
 import ProfilePhoto from '../assets/images/profile-img.png';
 
 import './ProfilePage.css';
-import Friends from '../components/Friends/Friends';
-import Communities from '../components/Communities/Communities';
+import Friends from '../components/InfoProfile/Friends/Friends';
+import Communities from '../components/InfoProfile/Communities/Communities';
 
 type Props = {};
 const ProfilePage = (props: Props): JSX.Element => {

@@ -1,15 +1,15 @@
-import photoFernando from '../../assets/images/friend-fernando.png';
-import photoAna from '../../assets/images/friend-ana.png';
-import photoCarlos from '../../assets/images/friend-carlos.png';
-import photoVitor from '../../assets/images/friend-vitor.png';
-import photoMatheus from '../../assets/images/friend-matheus.png';
-import photoRamos from '../../assets/images/friend-ramos.png';
-import photoEiji from '../../assets/images/friend-eiji.png';
-import photoJulia from '../../assets/images/friend-julia.png';
-import photoCarol from '../../assets/images/friend-carol.png';
+import photoFernando from '../../../assets/images/friend-fernando.png';
+import photoAna from '../../../assets/images/friend-ana.png';
+import photoCarlos from '../../../assets/images/friend-carlos.png';
+import photoVitor from '../../../assets/images/friend-vitor.png';
+import photoMatheus from '../../../assets/images/friend-matheus.png';
+import photoRamos from '../../../assets/images/friend-ramos.png';
+import photoEiji from '../../../assets/images/friend-eiji.png';
+import photoJulia from '../../../assets/images/friend-julia.png';
+import photoCarol from '../../../assets/images/friend-carol.png';
 
 import Friend from './Friend';
-import CardsFC from '../Card/CardsFC';
+import CardsFC from '../../Card/CardsFC';
 
 const Friends = (): JSX.Element => {
   return (

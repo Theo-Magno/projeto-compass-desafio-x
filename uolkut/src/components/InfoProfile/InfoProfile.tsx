@@ -1,14 +1,14 @@
 // import { Link } from 'react-router-dom';
 
-import Card from './Card/Card';
+import Card from '../Card/Card';
 import './InfoProfile.css';
 
-import Star from './Icons/emojis/Star';
-import Smiley from './Icons/emojis/Smiley';
-import ThumbsUp from './Icons/emojis/ThumbsUp';
-import Sexy from './Icons/emojis/Sexy';
+import Star from '../Icons/emojis/Star';
+import Smiley from '../Icons/emojis/Smiley';
+import ThumbsUp from '../Icons/emojis/ThumbsUp';
+import Sexy from '../Icons/emojis/Sexy';
 
-import Triangle from '../assets/images/triangle.png';
+import Triangle from '../../assets/images/triangle.png';
 import { Link } from 'react-router-dom';
 
 const InfoProfile = (): JSX.Element => {
