@@ -77,7 +77,7 @@ In this page, the user has to input the code sent to him after they go through t
 # Development Info
 
 ## Screen Size 
-The website was made entirely responsive but we targeted 4 specific sizes for implementing responsivity.
+The website was made entirely responsive but we targeted 3 specific sizes for implementing responsivity.
 - Mobile → `Width: 360px and Height: 787px`
 - Tablet → `Width: 768px and Height: 1080px`
 - Desktop  → `Width: 1920px and Height: 1080px`
