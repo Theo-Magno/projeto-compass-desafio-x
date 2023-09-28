@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import UolCircle from './Icons/UolCircle';
 import Card from './Card/Card';
@@ -11,8 +11,27 @@ import Pen from '../assets/images/pen.png';
 import { Link } from 'react-router-dom';
 
 const EditInformation = (): JSX.Element => {
+  const [enteredDate, setEnteredDate] = useState('');
+
+  const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    let newValue = event.target.value;
+    const numericValue = newValue.replace(/\D/g, '');
+
+    if (numericValue.length >= 1 && numericValue.length <= 8) {
+      let formattedDate = '';
+      for (let i = 0; i < numericValue.length; i++) {
+        if (i === 2 || i === 4) {
+          formattedDate += '/';
+        }
+        formattedDate += numericValue[i];
+      }
+      setEnteredDate(formattedDate);
+    } else {
+      setEnteredDate('');
+    }
+  };
+
   const submitFormHandler = (event: React.FormEvent) => {
-    console.log(event);
     event.preventDefault();
   };
 
@@ -21,8 +40,12 @@ const EditInformation = (): JSX.Element => {
       <section className="editions">
         <div className="image-profile">
           <Card classNameCard="edit">
-            <img src={ProfilePicture} alt="Profile" className='profile-picture' />
-            <img src={Pen} alt="Pen" className='pen' />
+            <img
+              src={ProfilePicture}
+              alt="Profile"
+              className="profile-picture"
+            />
+            <img src={Pen} alt="Pen" className="pen" />
           </Card>
         </div>
         <Card classNameCard="edit">
@@ -39,7 +62,14 @@ const EditInformation = (): JSX.Element => {
                 </div>
                 <div className="inputs_">
                   <Input type="text" id="name" placeholder="Nome" />
-                  <Input type="date" id="birthDate" placeholder="DD/MM/AAAA" />
+                  <Input
+                    type="text"
+                    id="birthDate"
+                    placeholder="DD/MM/AAAA"
+                    maxLength={10}
+                    onChange={dateChangeHandler}
+                    value={enteredDate}
+                  />
                 </div>
                 <div className="inputs-edit">
                   <Input type="text" id="country" placeholder="País" />

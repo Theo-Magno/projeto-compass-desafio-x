@@ -30,15 +30,14 @@ const Login = (): JSX.Element => {
     if (!enteredEmail.includes('@') || enteredEmail.trim() === '') {
       setEnteredEmailIsValid(false);
       event.preventDefault();
-      return;
     }
-    setEnteredEmailIsValid(true);
 
-    if (enteredPassword.trim() === '') {
+    if (enteredPassword.trim() === '' || enteredPassword.trim().length < 8) {
       setEnteredPasswordIsValid(false);
       event.preventDefault();
       return;
     }
+    setEnteredEmailIsValid(true);
     setEnteredPasswordIsValid(true);
   };
 
@@ -61,6 +60,7 @@ const Login = (): JSX.Element => {
               type="email"
               id="email"
               placeholder="E-mail"
+              value={enteredEmail}
               onChange={emailChangeHandler}
             />
             {!enteredEmailIsValid && (
@@ -70,6 +70,7 @@ const Login = (): JSX.Element => {
               type="password"
               id="password"
               placeholder="Senha"
+              value={enteredPassword}
               onChange={passwordChangeHandler}
             />
             {!enteredPasswordIsValid && (
