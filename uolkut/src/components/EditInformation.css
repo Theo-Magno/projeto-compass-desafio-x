@@ -1,4 +1,4 @@
-.header-card-edit{
+.header-card-edit {
   text-align: center;
 }
 
@@ -94,7 +94,7 @@
 
   .profile-picture {
     width: 12.85vw;
-    height: 15.74vh;
+    height: auto;
     border-radius: 50%;
     border: 3px solid #ed6d25;
     margin-inline-start: 20%;
@@ -186,10 +186,11 @@
     margin-inline-start: 3.5rem;
     background-color: #fff;
   }
+
   .profile-picture {
     width: 8.85vw;
-    height: 15.74vh;
-    border-radius: 92px;
+    height: auto;
+    border-radius: 50%;
     border: 3px solid #ed6d25;
     margin-inline-start: 20%;
   }
