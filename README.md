@@ -26,8 +26,8 @@ This is the page where the user creates his own account by inputting several inf
  - City
 
 
-After filling all the inputs the user is redirected to the second register page to provide more information.
->**Important Note:** The user specific information entered on both register forms will **not** be validated **nor** appear on the profile page.
+All the inputs have a validation system similar to the one used in the login page and after the user fills them and click *Criar conta*, they are redirected to the second register page to provide more information.
+>**Important Note:** The user specific information entered on both register forms will **not** appear on the profile page.
 
 ## Second Register Page
 This page is where the user inputs information about their likings and personal life:
@@ -47,8 +47,8 @@ This page is where the user inputs information about their likings and personal 
   - Smoke
   - Drink
 
-After filling all the inputs, with exception of habits, which the user is able to mark none of te options, they are redirected to the profile page
->**Important Note:** The user specific information entered on both register forms will **not** be validated **nor** appear on the profile page.
+In this second register form, the user can choose to fill none of the fields if they don't wish to, so there is no validation system. After clicking in *Criar conta* they are redirected to the profile page
+>**Important Note:** The user specific information entered on both register forms will **not** appear in the profile page.
 
 ## Profile Page
 
@@ -77,11 +77,10 @@ In this page, the user has to input the code sent to him after they go through t
 # Development Info
 
 ## Screen Size 
-The website was made entirely responsive but we targeted 4 specific sizes for implementing responsivity.
+The website was made entirely responsive but we targeted 3 specific sizes for implementing responsivity.
 - Mobile → `Width: 360px and Height: 787px`
 - Tablet → `Width: 768px and Height: 1080px`
-- Desktop 1 → `Width: 1200px and Height: 920px`
-- Desktop 2 → `Width: 1920px and Height: 1080px`
+- Desktop  → `Width: 1920px and Height: 1080px`
 
 ## Packages Used
 The site was made mainly with typescript with react and styled components. See below the full list of dependencies:
@@ -99,3 +98,11 @@ The site was made mainly with typescript with react and styled components. See b
 - "styled-components": "^6.0.8",
 - "typescript": "^4.9.5",
 - "web-vitals": "^2.1.4"
+
+# Running the application
+Here's how you can run this aplication:
+1. Download or clone all the files in your machine;
+2. Acess your system terminal and navigate to the project folder (uolkut);
+3. Run **npm install** in your terminal;
+4. Wait for all the packages to install and then run **npm start**;
+5. After that the application should be rendered on your main browser and you can access and test all pages.
