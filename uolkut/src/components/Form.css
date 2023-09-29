@@ -83,7 +83,7 @@ legend {
   flex-direction: row-reverse;
 }
 
-.checkbox-field input:checked ~ .checkmark {
+.checkbox-field input:checked~.checkmark {
   background-color: var(--primary-color);
 }
 
@@ -144,11 +144,9 @@ legend {
   }
 
   .image {
-    background: linear-gradient(
-        195deg,
+    background: linear-gradient(195deg,
         rgba(20, 20, 20, 0) 7.46%,
-        #141414 69.4%
-      ),
+        #141414 69.4%),
       url(/public/image.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -201,7 +199,7 @@ legend {
   .register {
     display: flex;
     margin-top: 9.31rem;
-    margin-bottom: 13rem;
+    margin-bottom: 12.8rem;
     margin-inline-start: 22rem;
   }
 
@@ -210,11 +208,9 @@ legend {
   }
 
   .image {
-    background: linear-gradient(
-        195deg,
+    background: linear-gradient(195deg,
         rgba(20, 20, 20, 0) 7.46%,
-        #141414 69.4%
-      ),
+        #141414 69.4%),
       url(/public/image.png);
     background-size: cover;
     background-repeat: no-repeat;

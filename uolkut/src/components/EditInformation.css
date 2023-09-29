@@ -92,6 +92,10 @@
     background-color: #fff;
   }
 
+  .pen:hover {
+    cursor: pointer;
+  }
+
   .profile-picture {
     width: 12.85vw;
     height: auto;
@@ -185,6 +189,10 @@
     margin-top: -3rem;
     margin-inline-start: 3.5rem;
     background-color: #fff;
+  }
+
+  .pen:hover {
+    cursor: pointer;
   }
 
   .profile-picture {

@@ -13,8 +13,12 @@ const HeaderProfile = (): JSX.Element => {
           <nav className="navbar">
             <NavLink to="/">Início</NavLink>
             <NavLink to="/profile">Perfil</NavLink>
-            <NavLink to="/community">Comunidades</NavLink>
-            <NavLink to="/games">Jogos</NavLink>
+            <NavLink to="/community" onClick={e => e.preventDefault()}>
+              Comunidades
+            </NavLink>
+            <NavLink to="/games" onClick={e => e.preventDefault()}>
+              Jogos
+            </NavLink>
           </nav>
         </div>
         <div className="header-right">

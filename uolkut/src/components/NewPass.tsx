@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import UolCircle from "./Icons/UolCircle";
-import Card from "./Card/Card";
-import Input from "./StyledComponents/Input";
-import ButtonCreate from "./StyledComponents/ButtonCreate";
-import ButtonCreateAlt from "./StyledComponents/ButtonCreateAlt";
+import UolCircle from './Icons/UolCircle';
+import Card from './Card/Card';
+import Input from './StyledComponents/Input';
+import ButtonCreate from './StyledComponents/ButtonCreate';
+import ButtonCreateAlt from './StyledComponents/ButtonCreateAlt';
 
-import "./Form.css";
-import { Link } from "react-router-dom";
+import './Form.css';
+import { Link } from 'react-router-dom';
 
 const NewPass = (): JSX.Element => {
-  const [enteredCode, setEnteredCode] = useState("");
+  const [enteredCode, setEnteredCode] = useState('');
   const [enteredCodeIsValid, setEnteredCodeIsValid] = useState(true);
 
-  const [enteredNewPass, setEnteredNewPass] = useState("");
+  const [enteredNewPass, setEnteredNewPass] = useState('');
   const [enteredNewPassIsValid, setEnteredNewPassIsValid] = useState(true);
 
-  const [enteredSecondPass, setEnteredSecondPass] = useState("");
+  const [enteredSecondPass, setEnteredSecondPass] = useState('');
   const [enteredSecondPassIsValid, setEnteredSecondPassIsValid] =
     useState(true);
 
@@ -115,9 +115,7 @@ const NewPass = (): JSX.Element => {
             </div>
           </div>
         </form>
-        <Link to="/">
-          <span className="login-redirection">Lembrou sua Senha?</span>
-        </Link>
+        <span className="login-redirection">Lembrou sua Senha?</span>
         <Link to="/">
           <ButtonCreateAlt type="submit">
             Entrar com as credenciais
