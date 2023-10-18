@@ -7,6 +7,7 @@ import Input from "./StyledComponents/Input";
 import ButtonCreate from "./StyledComponents/ButtonCreate";
 
 import "./Form.css";
+import { useAuthentication } from "../hooks/useAuthentication";
 
 const Register = (): JSX.Element => {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -30,6 +31,8 @@ const Register = (): JSX.Element => {
 
   const [enteredCity, setEnteredCity] = useState("");
   const [enteredCityIsValid, setEnteredCityIsValid] = useState(true);
+
+  const { createUser, error, loading } = useAuthentication();
 
   const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredEmail(event.target.value);
@@ -77,7 +80,7 @@ const Register = (): JSX.Element => {
     setEnteredCity(event.target.value);
   };
 
-  const submitFormHandler = (event: React.FormEvent) => {
+  const submitFormHandler = async (event: React.FormEvent) => {
     if (!enteredEmail.includes("@") || enteredEmail.trim() === "") {
       setEnteredEmailIsValid(false);
       event.preventDefault();
@@ -120,6 +123,14 @@ const Register = (): JSX.Element => {
     } else {
       setEnteredCityIsValid(true);
     }
+
+    const user = {
+      displayName: enteredName,
+      email: enteredEmail,
+      password: enteredPassword,
+    };
+
+    const res = await createUser(user);
   };
 
   return (
