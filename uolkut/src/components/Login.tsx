@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import UolCircle from './Icons/UolCircle';
-import Card from './Card/Card';
-import Input from './StyledComponents/Input';
-import ButtonCreate from './StyledComponents/ButtonCreate';
-import ButtonCreateAlt from './StyledComponents/ButtonCreateAlt';
+import UolCircle from "./Icons/UolCircle";
+import Card from "./Card/Card";
+import Input from "./StyledComponents/Input";
+import ButtonCreate from "./StyledComponents/ButtonCreate";
+import ButtonCreateAlt from "./StyledComponents/ButtonCreateAlt";
 
-import './Form.css';
+import "./Form.css";
+import { useAuthentication } from "../hooks/useAuthentication";
 
 const Login = (): JSX.Element => {
-  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(true);
 
-  const [enteredPassword, setEnteredPassword] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState("");
   const [enteredPasswordIsValid, setEnteredPasswordIsValid] = useState(true);
+
+  const [error, setError] = useState("");
+
+  const { login, error: authError, loading } = useAuthentication();
 
   const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredEmail(event.target.value);
@@ -26,20 +31,41 @@ const Login = (): JSX.Element => {
     setEnteredPassword(event.target.value);
   };
 
-  const submitFormHandler = (event: React.FormEvent) => {
-    if (!enteredEmail.includes('@') || enteredEmail.trim() === '') {
+  const submitFormHandler = async (event: React.FormEvent) => {
+    setError("");
+
+    if (!enteredEmail.includes("@") || enteredEmail.trim() === "") {
       setEnteredEmailIsValid(false);
       event.preventDefault();
     }
 
-    if (enteredPassword.trim() === '' || enteredPassword.trim().length < 8) {
+    if (enteredPassword.trim() === "" || enteredPassword.trim().length < 6) {
       setEnteredPasswordIsValid(false);
+      event.preventDefault();
+    }
+    if (authError) {
       event.preventDefault();
       return;
     }
     setEnteredEmailIsValid(true);
     setEnteredPasswordIsValid(true);
+
+    const user = {
+      email: enteredEmail,
+      password: enteredPassword,
+    };
+
+    const res = await login(user);
+
+    console.log(res);
   };
+
+  useEffect(() => {
+    console.log(authError);
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
 
   return (
     <section className="register">
@@ -64,7 +90,7 @@ const Login = (): JSX.Element => {
               onChange={emailChangeHandler}
             />
             {!enteredEmailIsValid && (
-              <p className="invalid-input">Email Inválido</p>
+              <p className="invalid-input">E-mail inválido</p>
             )}
             <Input
               type="password"
@@ -84,10 +110,22 @@ const Login = (): JSX.Element => {
               </label>
             </fieldset>
             <div className="form-actions">
+              {error && <p className="invalid-input">{error}</p>}
               <Link to="/profile">
-                <ButtonCreate type="submit" onClick={submitFormHandler}>
-                  Entrar na conta
-                </ButtonCreate>
+                {!loading && (
+                  <ButtonCreate type="submit" onClick={submitFormHandler}>
+                    Entrar na conta
+                  </ButtonCreate>
+                )}
+                {loading && (
+                  <ButtonCreate
+                    type="submit"
+                    disabled
+                    onClick={submitFormHandler}
+                  >
+                    Aguarde...
+                  </ButtonCreate>
+                )}
               </Link>
               <Link to="/register">
                 <ButtonCreateAlt type="submit">Criar conta</ButtonCreateAlt>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import UolCircle from "./Icons/UolCircle";
@@ -8,6 +8,8 @@ import ButtonCreate from "./StyledComponents/ButtonCreate";
 
 import "./Form.css";
 import { useAuthentication } from "../hooks/useAuthentication";
+import { db } from "../firebase/config";
+import { addDoc, collection } from "firebase/firestore";
 
 const Register = (): JSX.Element => {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -32,7 +34,9 @@ const Register = (): JSX.Element => {
   const [enteredCity, setEnteredCity] = useState("");
   const [enteredCityIsValid, setEnteredCityIsValid] = useState(true);
 
-  const { createUser, error, loading } = useAuthentication();
+  const { createUser, error: authError, loading } = useAuthentication();
+
+  const [error, setError] = useState("");
 
   const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredEmail(event.target.value);
@@ -80,14 +84,31 @@ const Register = (): JSX.Element => {
     setEnteredCity(event.target.value);
   };
 
+  const usersCollectionRef = collection(db, "users");
+
+  const addToFirestore = async () => {
+    await addDoc(usersCollectionRef, {
+      email: enteredEmail,
+      name: enteredName,
+      birthDate: enteredDate,
+      profession: enteredProfession,
+      country: enteredCountry,
+      city: enteredCity,
+    });
+  };
+
   const submitFormHandler = async (event: React.FormEvent) => {
-    if (!enteredEmail.includes("@") || enteredEmail.trim() === "") {
+    if (
+      !enteredEmail.includes("@") ||
+      enteredEmail.trim() === "" ||
+      !enteredEmail.includes(".com")
+    ) {
       setEnteredEmailIsValid(false);
       event.preventDefault();
     } else {
       setEnteredEmailIsValid(true);
     }
-    if (enteredPassword.trim().length < 8) {
+    if (enteredPassword.trim().length < 6) {
       setEnteredPasswordIsValid(false);
       event.preventDefault();
     } else {
@@ -131,7 +152,15 @@ const Register = (): JSX.Element => {
     };
 
     const res = await createUser(user);
+    addToFirestore();
   };
+
+  useEffect(() => {
+    console.log(authError);
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
 
   return (
     <React.Fragment>
@@ -168,7 +197,7 @@ const Register = (): JSX.Element => {
               />
               {!enteredPasswordIsValid && (
                 <p className="invalid-input">
-                  A senha precisa conter pelo menos 8 caracteres
+                  A senha precisa conter pelo menos 6 caracteres
                 </p>
               )}
               <Input
@@ -228,10 +257,22 @@ const Register = (): JSX.Element => {
               {!enteredCityIsValid && (
                 <p className="invalid-input">Cidade Inválida</p>
               )}
+              {error && <p className="invalid-input">{error}</p>}
               <Link to="/second-register">
-                <ButtonCreate type="submit" onClick={submitFormHandler}>
-                  Criar conta
-                </ButtonCreate>
+                {!loading && (
+                  <ButtonCreate type="submit" onClick={submitFormHandler}>
+                    Criar conta
+                  </ButtonCreate>
+                )}
+                {loading && (
+                  <ButtonCreate
+                    type="submit"
+                    disabled
+                    onClick={submitFormHandler}
+                  >
+                    Aguarde...
+                  </ButtonCreate>
+                )}
               </Link>
             </div>
           </form>

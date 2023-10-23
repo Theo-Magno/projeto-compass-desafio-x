@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 
 import { useState, useEffect } from "react";
+import { getSystemErrorMap } from "util";
 
 export const useAuthentication = () => {
   const [error, setError] = useState("");
@@ -24,6 +25,7 @@ export const useAuthentication = () => {
     }
   }
 
+  //registrar
   const createUser = async (data: {
     email: string;
     password: string;
@@ -42,15 +44,45 @@ export const useAuthentication = () => {
       await updateProfile(user, {
         displayName: data.displayName,
       });
-
+      setLoading(false);
       return user;
-    } catch (error) {
-      if (error instanceof Error) {
-        console.log(error.message);
-        console.log(typeof error);
+    } catch (error: any) {
+      console.log(error.message);
+      console.log(typeof error.message);
+
+      let SystemErrorMessage;
+
+      if (error.message.includes("Password")) {
+        SystemErrorMessage = "A senha precisa conter pelo menos 6 caracteres.";
+      } else if (error.message.includes("email-already")) {
+        SystemErrorMessage = "E-mail já cadastrado.";
       } else {
-        console.log("Unexpected error", error);
+        SystemErrorMessage = "Ocorreu um erro, tente mais tarde";
       }
+      setError(SystemErrorMessage);
+    }
+    setLoading(false);
+  };
+
+  //login
+  const login = async (data: { email: string; password: string }) => {
+    checkIfIsCancelled();
+
+    setLoading(true);
+
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+    } catch (error: any) {
+      let SystemErrorMessage;
+
+      if (error.message.includes("user-not-found")) {
+        SystemErrorMessage = "Usuário não encontrado.";
+      } else if (error.message.includes("wrong-password")) {
+        SystemErrorMessage = "Senha incorreta";
+      } else {
+        SystemErrorMessage = "Ocorreu um erro, tente mais tarde";
+      }
+      setError(SystemErrorMessage);
     }
     setLoading(false);
   };
@@ -59,5 +91,5 @@ export const useAuthentication = () => {
     return () => setCancelled(true);
   }, []);
 
-  return { auth, createUser, error, loading };
+  return { auth, createUser, error, loading, login };
 };
