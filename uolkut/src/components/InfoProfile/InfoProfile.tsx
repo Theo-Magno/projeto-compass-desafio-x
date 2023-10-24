@@ -1,20 +1,57 @@
-// import { Link } from 'react-router-dom';
+import Card from "../Card/Card";
+import "./InfoProfile.css";
 
-import Card from '../Card/Card';
-import './InfoProfile.css';
+import Star from "../Icons/emojis/Star";
+import Smiley from "../Icons/emojis/Smiley";
+import ThumbsUp from "../Icons/emojis/ThumbsUp";
+import Sexy from "../Icons/emojis/Sexy";
 
-import Star from '../Icons/emojis/Star';
-import Smiley from '../Icons/emojis/Smiley';
-import ThumbsUp from '../Icons/emojis/ThumbsUp';
-import Sexy from '../Icons/emojis/Sexy';
+import Triangle from "../../assets/images/triangle.png";
+import { Link } from "react-router-dom";
+import { useAuthValue } from "../../context/AuthContext";
+import { useState, useEffect } from "react";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
-import Triangle from '../../assets/images/triangle.png';
-import { Link } from 'react-router-dom';
+interface UserData {
+  profession: string;
+  city: string;
+  country: string;
+}
+interface UserDocument {
+  profession: string;
+  city: string;
+  country: string;
+}
 
 const InfoProfile = (): JSX.Element => {
+  const user = useAuthValue();
+  const [userData, setUserData] = useState<UserData | null>(null);
+
+  useEffect(() => {
+    if (user) {
+      const userId = user.uid;
+      const userDocRef = doc(db, "users", userId);
+
+      getDoc(userDocRef)
+        .then((doc) => {
+          if (doc) {
+            console.log(userId);
+            const userDataFromFirestore = doc.data() as UserDocument;
+            setUserData(userDataFromFirestore);
+          } else {
+            console.log("Usuário não encontrado");
+          }
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    }
+  }, [user]);
+
   return (
     <Card classNameCard="card-profile-info">
-      <h3 className="title-info-profile">Boa tarde, Linus Torvalds</h3>
+      <h3 className="title-info-profile">Boa tarde, {user?.displayName}</h3>
       <div className="quote">
         <div className="triangle">
           <img src={Triangle} alt="apontamento" />
@@ -77,11 +114,11 @@ const InfoProfile = (): JSX.Element => {
         </dl>
         <dl className="info-status">
           <dt>País:</dt>
-          <dd>Brasil</dd>
+          <dd>{userData?.country}</dd>
         </dl>
         <dl className="info-status">
           <dt>Cidade:</dt>
-          <dd>São Paulo</dd>
+          <dd>{userData?.city}</dd>
         </dl>
       </div>
       <div className="box-tags">

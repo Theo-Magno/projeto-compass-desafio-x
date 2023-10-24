@@ -5,11 +5,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
-  signOut,
 } from "firebase/auth";
 
 import { useState, useEffect } from "react";
-import { getSystemErrorMap } from "util";
 
 export const useAuthentication = () => {
   const [error, setError] = useState("");
